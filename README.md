@@ -5,18 +5,18 @@ This script uses several [Sound eXchange (SoX)](http://sox.sourceforge.net/) eff
 ## Setup
 
 * Install SoX ([download](https://sourceforge.net/projects/sox/files/sox/) or just use your favorite package manager)
-* Locate the installation location for SoX nad place the .sh script in that same directory
-* Open terminal and add the following entry to your .bash_profile: `alias cleanup="/usr/local/bin/cleanup.sh"`
+* Locate the installation location for SoX and place the .sh script in that same directory
+* Open terminal and add the following entry to your .bash_profile: `alias cleanup="/usr/local/bin/cleanup.sh"` (or replace "cleanup" with whatever you'd like to call it)
 
 ## Usage
 
-With the setup out of the way, you can now use the audio cleanup script with `cleanup <file in> <file out>`, where `<file in>` is the audio file you'd like to clean up and `file out` is how/where you'd like the output to audio file to be named and saved.
+With the setup out of the way, you can now use the audio cleanup script with `cleanup infile outfile`, where `infile` is the audio file you'd like to clean up and `outfile` is how/where you'd like the output to audio file to be named and saved.
 
 If you're working with a master file of multiple voice clips, you'll first need to break them apart. Record a list of the breakpoints you'd like to use and then repeatedly run `sox infile outfile trim starttime =endtime` on the source file to produce all of the output files you need for the individual audio clips.
 
 ## Understanding the Script
 
-You'll probably want to mess with some of the values in the script to tune it to your needs. Here's a brief overview of the SoX effects used in the script. For more/better details, check out [the SoX documentation](http://sox.sourceforge.net/sox.html).
+You'll probably want to mess with some of the values in the script to tune it to your needs. Here's a brief overview of the SoX effects used. For more/better details, check out [the SoX documentation](http://sox.sourceforge.net/sox.html).
 
 * `remix`
   * Performs a mix-down of all input channels to mono
