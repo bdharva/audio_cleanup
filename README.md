@@ -1,10 +1,10 @@
 # audio_cleanup
 
-This script uses several Sound eXchange (SoX) effects in combination to normalise and trim voice recordings that may have been recorded using different microphones, with differing background noise etc.
+This script uses several [Sound eXchange (SoX)](http://sox.sourceforge.net/) effects in combination to normalise and trim voice recordings that may have been recorded using different microphones, with differing background noise etc.
 
 ## Setup
 
-* Install SoX (Documentation & download: http://sox.sourceforge.net/)
+* Install SoX ([download](https://sourceforge.net/projects/sox/files/sox/) or just use your favorite package manager)
 * Locate the installation location for SoX nad place the .sh script in that same directory
 * Open terminal and add the following entry to your .bash_profile: `alias cleanup="/usr/local/bin/cleanup.sh"`
 
